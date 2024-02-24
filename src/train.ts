@@ -1,3 +1,6 @@
+
+console.log("hello");
+
 //  ===========================  Task-G
 
 // function getHighestIndex(arr) {
