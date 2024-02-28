@@ -1,10 +1,16 @@
 // ==================  Task-H
 
-function getReverse(txt: string) {
-     let arr = txt.split('').reverse().join('');
-     return arr;
+function getPositive(arr: number[]):string {
+   let a: string  = ('');
+   for(let i of arr) {
+      if(i > 0) {
+         a = a + i;
+      }
+   }
+   return a.split('').join('');   
 }
 
-let result:string = getReverse("hello");
+let result = getPositive([2, -1, 3]);
+    console.log(result);
 
-console.log("reversedArrey: ", result);
+
