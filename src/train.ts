@@ -1,16 +1,23 @@
-// ==================  Task-H
+// ==================  Task-I
 
-function getPositive(arr: number[]):string {
-   let a: string  = ('');
-   for(let i of arr) {
-      if(i > 0) {
-         a = a + i;
-      }
+function getDigit(digit: string): string {
+   const str = digit.split('');
+   const numbers = [];
+   for(let a of str) {
+       const num = parseInt(a);
+       console.log("num: ", num);
+       
+       if(!isNaN(num)) {
+           numbers.push(num);
+       }
    }
-   return a.split('').join('');   
+
+  return numbers.join('');           
 }
 
-let result = getPositive([2, -1, 3]);
-    console.log(result);
+const result = getDigit('m14i1tfgfv6kj');
+
+console.log("result: ", result);
+
 
 
