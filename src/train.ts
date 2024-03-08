@@ -1,23 +1,18 @@
-// ==================  Task-I
+// ==================  Task-J
 
-function getDigit(digit: string): string {
-   const str = digit.split('');
-   const numbers = [];
-   for(let a of str) {
-       const num = parseInt(a);
-       console.log("num: ", num);
-       
-       if(!isNaN(num)) {
-           numbers.push(num);
-       }
-   }
-
-  return numbers.join('');           
+function findLongestWord(txt: string):string{
+    let arr = txt.split(" ");
+    let longIndex = 0;
+    for(let i = 1; i < arr.length; i++) {
+        if(arr[i].length > arr[longIndex].length) {
+            longIndex = i;
+        }
+    }
+    return arr[longIndex];  
 }
 
-const result = getDigit('m14i1tfgfv6kj');
-
-console.log("result: ", result);
+const result = findLongestWord('I am Dixon and I am from Uzbekistan');
+console.log(result);
 
 
 
