@@ -7,12 +7,12 @@ import restaurantController from './controllers/restaurant.controller';
 routerAdmin.get('/', restaurantController.goHome);
 
 routerAdmin
-.get('/login', restaurantController.getLogin)
-.post('/login', restaurantController.processLogin);
-
-routerAdmin
 .get('/signup', restaurantController.getSignUp)
 .post('/signup', restaurantController.processSignup);
+
+routerAdmin
+.get('/login', restaurantController.getLogin)
+.post('/login', restaurantController.processLogin);
 
 /*Prduct */
 /** User  */
