@@ -1,18 +1,21 @@
-// ==================  Task-J
+// ==================  Task-K
 
-function findLongestWord(txt: string):string{
-    let arr = txt.split(" ");
-    let longIndex = 0;
-    for(let i = 1; i < arr.length; i++) {
-        if(arr[i].length > arr[longIndex].length) {
-            longIndex = i;
-        }
+function countVowels(txt:string): number {
+   const vowels: string = "aeiouAEIOU";
+   let extractVowels: string = "";
+   for(let letter of txt) {
+    if(vowels.includes(letter)) {
+        extractVowels += letter;
     }
-    return arr[longIndex];  
+   }
+   return extractVowels.length;
 }
 
-const result = findLongestWord('I am Dixon and I am from Uzbekistan');
-console.log(result);
+const result = countVowels("string");
+console.log("vowels: ", result);
+
+
+
 
 
 
