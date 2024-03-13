@@ -1,18 +1,17 @@
-// ==================  Task-K
-
-function countVowels(txt:string): number {
-   const vowels: string = "aeiouAEIOU";
-   let extractVowels: string = "";
-   for(let letter of txt) {
-    if(vowels.includes(letter)) {
-        extractVowels += letter;
-    }
+// ==================  Task-L
+function reverseSentence(txt: string):string {
+   const arr: string[] = txt.split(" ");
+   const newStr:string[] = [];
+   for(let i = 0; i < arr.length; i++) {
+     let a:string = arr[i].split("").reverse().join("");
+    newStr.push(a);
    }
-   return extractVowels.length;
+   return newStr.join(" ");
 }
 
-const result = countVowels("string");
-console.log("vowels: ", result);
+const result = reverseSentence("We love coding");
+console.log("result: ",result);
+
 
 
 
