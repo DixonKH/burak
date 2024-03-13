@@ -48,8 +48,8 @@ restaurantController.processSignup = async (req: AdminRequest, res: Response) =>
     const newMember:MemberInput = req.body;
     newMember.memberType = MemberType.RESTAURANT;
     const result = await memberService.processSignup(newMember);
-    // TODO: SESSIONS AUTHENTICAION
     
+    // TODO: SESSIONS AUTHENTICAION
     req.session.member = result;
     req.session.save(function() {
       res.send(result);
