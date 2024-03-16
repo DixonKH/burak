@@ -1,16 +1,15 @@
 // ==================  Task-L
-function reverseSentence(txt: string):string {
-   const arr: string[] = txt.split(" ");
-   const newStr:string[] = [];
-   for(let i = 0; i < arr.length; i++) {
-     let a:string = arr[i].split("").reverse().join("");
-    newStr.push(a);
+function getScuareNumbers(num: number[]): {number: number, square: number}[]{
+   let squaredArr:{number: number, square: number}[] = [];
+   for(let a of num) {
+      let objarr = {number: a, square: Math.pow(a, 2)};
+      squaredArr.push(objarr);
    }
-   return newStr.join(" ");
+   return squaredArr;
 }
 
-const result = reverseSentence("We love coding");
-console.log("result: ",result);
+const result = getScuareNumbers([5, 4, 3, 7, 8]);
+console.log("result: ", result);
 
 
 
