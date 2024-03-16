@@ -26,7 +26,7 @@ productController.getAllProducts);
 routerAdmin.post(
     '/product/create',
 restaurantController.verifyRestaurant,
-makeUpLoader("products").array("productImages", 5), 
+makeUpLoader("products").array("productImages", 4),
 productController.createNewProduct);
 
 routerAdmin.post(
