@@ -1,4 +1,5 @@
-// ==================  Task-L
+// ==================  Task-M
+
 function getScuareNumbers(num: number[]): {number: number, square: number}[]{
    let squaredArr:{number: number, square: number}[] = [];
    for(let a of num) {
