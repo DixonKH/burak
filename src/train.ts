@@ -1,15 +1,13 @@
 // ==================  Task-M
 
-function getScuareNumbers(num: number[]): {number: number, square: number}[]{
-   let squaredArr:{number: number, square: number}[] = [];
-   for(let a of num) {
-      let objarr = {number: a, square: Math.pow(a, 2)};
-      squaredArr.push(objarr);
-   }
-   return squaredArr;
+function palindromCheck(txt: string): boolean{
+   const arr:string = txt.split("").reverse().join("");
+   if(txt === arr) return true;
+   else return false;
+   
 }
 
-const result = getScuareNumbers([5, 4, 3, 7, 8]);
+const result = palindromCheck("ukku");
 console.log("result: ", result);
 
 

@@ -18,6 +18,7 @@ routerAdmin.get('/logout', restaurantController.logout);
 routerAdmin.get('/check-me', restaurantController.checkAuthSession);
 
 /*Prduct */
+
 routerAdmin.get(
     '/product/all',
 restaurantController.verifyRestaurant, 
