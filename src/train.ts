@@ -1,4 +1,4 @@
-// ==================  Task-M
+// ==================  Task-N
 
 function palindromCheck(txt: string): boolean{
    const arr:string = txt.split("").reverse().join("");
