@@ -1,4 +1,4 @@
-// ==================  Task-N
+// ==================  Task-O
 
 function calculateSumOfNumbers(txt: any[]): any{
     let sum = 0;
