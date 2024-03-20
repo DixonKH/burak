@@ -1,6 +1,6 @@
 // ==================  Task-O
 
-function calculateSumOfNumbers(txt: any[]): any{
+function calculateSumOfNumbers(txt: any[]): number{
     let sum = 0;
     for(let i = 0; i < txt.length; i++) {
       if(typeof txt[i] === 'number'){
