@@ -6,14 +6,12 @@ $(function() {
     fileTarget.on("change", function() {
         if(window.FileReader) {
             const uploadFile = $(this)[0].files[0];
-            console.log("file: ", uploadFile);
             const fileType = uploadFile["type"];
             const validImageType = ["image/jpeg", "image/png", "image/jpg"];
             if(!validImageType.includes(fileType)) {
                alert("Please insert only jpeg, jpg and png files!")
             }else {
                 if(uploadFile) {
-                    console.log(URL.createObjectURL(uploadFile));
                     $(".upload-img-frame").attr("src", URL.createObjectURL(uploadFile)).addClass("Success");
                 }
                 filename = $(this)[0].files[0].name;
