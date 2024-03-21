@@ -8,7 +8,7 @@ $(function() {
             const uploadFile = $(this)[0].files[0];
             console.log("file: ", uploadFile);
             const fileType = uploadFile["type"];
-            const validImageType = ["image/jpeg", "image/png", "oimage/jpg"];
+            const validImageType = ["image/jpeg", "image/png", "image/jpg"];
             if(!validImageType.includes(fileType)) {
                alert("Please insert only jpeg, jpg and png files!")
             }else {
@@ -34,7 +34,7 @@ function validatesSignupForm() {
         memberPassword === ""
         ) {
         alert("Please insert all required inputs"); 
-        return false  
+        return false; 
     }
     if(memberPassword !== confirmPassword) {
         alert("Password differs, please check!");
