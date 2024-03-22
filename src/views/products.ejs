@@ -4,7 +4,7 @@
 
 <body>
   <div class="products-container">
-    <div class="navigation-menu">
+    <div class="navigation-menu"> 
       <ul class="nav justify-content-center">
         <li class="nav-item" style="cursor: pointer">
           <a class="nav-link active" href="/admin/">Home</a>
@@ -74,6 +74,7 @@
           </div>
         </div>
         <form
+          onsubmit="return validateForm()"
           action="/admin/product/create"
           method="POST"
           class="dish-container"
@@ -168,6 +169,7 @@
                   name="productImages"
                   class="image-one"
                   required
+                  onchange="previewFileHendler(this, 1)"
                 />
               </div>
               <div class="upload-img-box">
@@ -177,6 +179,7 @@
                   id="file"
                   name="productImages"
                   class="image-two"
+                  onchange="previewFileHendler(this, 2)"
                 />
               </div>
               <div class="upload-img-box">
@@ -186,6 +189,7 @@
                   id="file"
                   name="productImages"
                   class="image-three"
+                  onchange="previewFileHendler(this, 3)"
                 />
               </div>
               <div class="upload-img-box">
@@ -195,6 +199,7 @@
                   id="file"
                   name="productImages"
                   class="image-four"
+                  onchange="previewFileHendler(this, 4)"
                 />
               </div>
               <div class="upload-img-box">
@@ -204,6 +209,7 @@
                   id="file"
                   name="productImages"
                   class="image-five"
+                  onchange="previewFileHendler(this, 5)"
                 />
               </div>
               <input name="restaurantIid" class="restaurant-id" hidden />

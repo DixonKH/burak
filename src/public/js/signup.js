@@ -39,7 +39,8 @@ function validatesSignupForm() {
         return false;
     }
 
-    const memberImage = $(".member-image").get(0).files[0] ? $(".member-image").get(0).files[0].name : null;
+    const memberImage = $(".member-image").get(0).files[0].name ? $(".member-image").get(0).files[0].name : null;
+    console.log("$(.member-image).get(0) ", $(".member-image").get(0));
     if(!memberImage) {
         alert("Please insert restaurant image");
         return false;
