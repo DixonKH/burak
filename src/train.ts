@@ -1,16 +1,14 @@
-// ==================  Task-O
+// ==================  Task-P
 
-function calculateSumOfNumbers(txt: any[]): number{
-    let sum = 0;
-    for(let i = 0; i < txt.length; i++) {
-      if(typeof txt[i] === 'number'){
-         sum += txt[i];
-      }
-    }  
-   return sum;
+interface T {
+[key:string]: number;
+}
+function objectToArray(obj: T):[string, number][] {
+     return Object.entries(obj);
+     
 }
 
-const result = calculateSumOfNumbers([10, "16", {son:11}, true, 1, 15]);
+const result = objectToArray({a: 30, b:50});
 console.log("result: ", result);
 
 
