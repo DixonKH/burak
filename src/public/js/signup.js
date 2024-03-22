@@ -5,9 +5,9 @@ $(function() {
     let filename;
     fileTarget.on("change", function() {
         if(window.FileReader) {
-            const uploadFile = $(this)[0].files[0];
-            const fileType = uploadFile["type"];
-            const validImageType = ["image/jpeg", "image/png", "image/jpg"];
+            const uploadFile = $(this)[0].files[0],
+                  fileType = uploadFile["type"],
+                  validImageType = ["image/jpeg", "image/png", "image/jpg"];
             if(!validImageType.includes(fileType)) {
                alert("Please insert only jpeg, jpg and png files!")
             }else {
@@ -22,10 +22,10 @@ $(function() {
 });
 
 function validatesSignupForm() {
-    const memberNick = $(".member-nick").val();
-    const memberPhone = $(".member-phone").val();
-    const memberPassword = $(".member-password").val();
-    const confirmPassword = $(".confirm-password").val();
+    const memberNick = $(".member-nick").val(),
+     memberPhone = $(".member-phone").val(),
+     memberPassword = $(".member-password").val(),
+     confirmPassword = $(".confirm-password").val();
     
     if(memberNick === "" || 
         memberPhone === "" || 
@@ -40,7 +40,6 @@ function validatesSignupForm() {
     }
 
     const memberImage = $(".member-image").get(0).files[0].name ? $(".member-image").get(0).files[0].name : null;
-    console.log("$(.member-image).get(0) ", $(".member-image").get(0));
     if(!memberImage) {
         alert("Please insert restaurant image");
         return false;
