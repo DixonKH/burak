@@ -63,10 +63,9 @@ function validateForm() {
 
 function previewFileHendler(input, order) {
      const imgClassName = input.className;
-     console.log("input: ", input);
-     console.log("imgClassName: ", imgClassName);
 
      const file = $(`.${imgClassName}`).get(0).files[0];
+     console.log("file: ", file);
      const fileType = file["type"];
      const validImageType = ["image/jpeg", "image/png", "image/jpg"];
      if(!validImageType.includes(fileType)) {
@@ -74,6 +73,7 @@ function previewFileHendler(input, order) {
      } else {
         if(file) {
             const reader = new FileReader();
+            console.log("reader: ", reader);
             reader.onload = function() {
                 $(`#image-section-${order}`).attr("src", reader.result);
             };

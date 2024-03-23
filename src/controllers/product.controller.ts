@@ -60,7 +60,6 @@ productController.getAllProducts = async (req: Request, res: Response) => {
       console.log("updateChosenProduct: ", err); 
       if(err instanceof Errors) res.status(err.code).json(err);
       else res.status(Errors.standard.code).json(Errors.standard);
-     // res.json({});
     }
   };
 
