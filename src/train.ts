@@ -1,14 +1,13 @@
-// ==================  Task-P
+// ==================  Task-Q
 
 interface T {
-[key:string]: number;
+[key:string]: string;
 }
-function objectToArray(obj: T):[string, number][] {
-     return Object.entries(obj);
-     
+function hasProperty(obj: T):boolean {
+     return Object.prototype.hasOwnProperty.call(obj, "speed");   
 }
 
-const result = objectToArray({a: 30, b:50});
+const result = hasProperty({name: "BMW", model:"M3", year: "2019"});
 console.log("result: ", result);
 
 
